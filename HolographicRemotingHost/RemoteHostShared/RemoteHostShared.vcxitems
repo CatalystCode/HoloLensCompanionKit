@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+    <ItemsProjectName>HolographicRemotingHostShared</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\RemotingHostLib\dllmain.cpp">
+      <CompileAsManaged>false</CompileAsManaged>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\CameraResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\DeviceResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\SpatialInputHandler.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)HolographicRemotingHost.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\CameraResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DbgLog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DeviceResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\SpatialInputHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)remote_host_config.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)HolographicRemotingHost.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)targetver.h" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+# git ignore file
+bin/
+obj/
+.vs/
+*.user
+project.lock.json
+debug/
+packages/
+x64/
+*/debug
+*/x64
+*/packages
+ipch/
+

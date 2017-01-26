@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="RemotingHostSampleDesktop.h" />
+    <ClInclude Include="Content\RenderableObject.h" />
+    <ClInclude Include="Content\ShaderStructures.h" />
+    <ClInclude Include="Content\SpatialInputHandler.h" />
+    <ClInclude Include="Content\SpatialInputRenderer.h" />
+    <ClInclude Include="Content\SpinningCubeRenderer.h" />
+    <ClInclude Include="AppMain.h" />
+    <ClInclude Include="AppView.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Common\CameraResources.h" />
+    <ClInclude Include="Common\DbgLog.h" />
+    <ClInclude Include="Common\DeviceResources.h" />
+    <ClInclude Include="Common\DeviceResourcesWindowed.h" />
+    <ClInclude Include="Common\DirectXHelper.h" />
+    <ClInclude Include="Common\StepTimer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RemotingHostSampleDesktop.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RemotingHostSampleDesktop.cpp" />
+    <ClCompile Include="Content\RenderableObject.cpp" />
+    <ClCompile Include="Content\SpatialInputHandler.cpp" />
+    <ClCompile Include="Content\SpatialInputRenderer.cpp" />
+    <ClCompile Include="Content\SpinningCubeRenderer.cpp" />
+    <ClCompile Include="AppMain.cpp" />
+    <ClCompile Include="AppView.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Common\CameraResources.cpp" />
+    <ClCompile Include="Common\DeviceResources.cpp" />
+    <ClCompile Include="Common\DeviceResourcesWindowed.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RemotingHostSampleDesktop.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)\Content\GeometryShader.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)\Content\PixelShader.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)\Content\VertexShader.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)\Content\VPRTVertexShader.hlsl" />
+  </ItemGroup>
+</Project>
